@@ -9,7 +9,6 @@ public abstract class Conta implements Tributavel {
 	private double saldo;
 
 	public Conta(int agencia, int conta, String titular, double saldo) {
-		super();
 		this.agencia = agencia;
 		this.conta = conta;
 		this.titular = titular;
@@ -17,7 +16,6 @@ public abstract class Conta implements Tributavel {
 	}
 
 	public Conta(int agencia, int conta, String titular) {
-		super();
 		this.agencia = agencia;
 		this.conta = conta;
 		this.titular = titular;
