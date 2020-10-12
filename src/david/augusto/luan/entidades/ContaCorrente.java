@@ -12,10 +12,12 @@ public class ContaCorrente extends Conta {
 		// TODO Auto-generated constructor stub
 	}
 
+	// uma vez que elas a subclasse extendem uma super classe
+	// elas sao obrigadas a implementar os metodos abstratos
 	@Override
 	public void sacar(double montante) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

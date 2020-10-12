@@ -20,8 +20,8 @@ public abstract class Conta {
 		this.conta = conta;
 		this.titular = titular;
 	}
-	
-	
+
+	// metodos abstratos nao tem corpo
 	public abstract void sacar(double montante);
 
 	public int getAgencia() {
