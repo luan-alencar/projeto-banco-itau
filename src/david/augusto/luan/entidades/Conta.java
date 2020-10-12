@@ -24,6 +24,11 @@ public abstract class Conta {
 	// metodos abstratos nao tem corpo
 	public abstract void sacar(double montante);
 
+	// para ninguem sobrescrever o metodo depositar
+	public final void depositar(double montante) {
+		saldo += montante;
+	}
+
 	public int getAgencia() {
 		return agencia;
 	}
