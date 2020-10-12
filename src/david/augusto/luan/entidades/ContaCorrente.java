@@ -20,4 +20,10 @@ public class ContaCorrente extends Conta {
 
 	}
 
+	@Override
+	public double getValorTribut() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
 }

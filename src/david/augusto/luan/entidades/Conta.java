@@ -1,6 +1,6 @@
 package david.augusto.luan.entidades;
 
-public abstract class Conta {
+public abstract class Conta implements Tributavel {
 	private int agencia;
 	private int conta;
 	private String titular;

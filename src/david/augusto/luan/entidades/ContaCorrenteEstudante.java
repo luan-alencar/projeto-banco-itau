@@ -18,4 +18,10 @@ public final class ContaCorrenteEstudante extends Conta {
 
 	}
 
+	@Override
+	public double getValorTribut() {
+		// TODO Auto-generated method stub
+		return 12;
+	}
+
 }
