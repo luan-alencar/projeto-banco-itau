@@ -1,5 +1,7 @@
 package david.augusto.luan.entidades;
 
+import david.augusto.luan.exceptions.SaldoInsuficienteException;
+
 public class ContaPoupanca extends Conta {
 
 	public ContaPoupanca(int agencia, int conta, String titular, double saldo) {
@@ -12,10 +14,13 @@ public class ContaPoupanca extends Conta {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void sacar(double montante) {
+	public void sacar(double montante) throws SaldoInsuficienteException {
 		// TODO Auto-generated method stub
-		
+		if (getSaldo() < montante) {
+			throw new SaldoInsuficienteException();
+		}
+		montante -= getSaldo();
+
 	}
 
 	@Override

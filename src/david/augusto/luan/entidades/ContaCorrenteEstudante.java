@@ -1,5 +1,7 @@
 package david.augusto.luan.entidades;
 
+import david.augusto.luan.exceptions.SaldoInsuficienteException;
+
 public final class ContaCorrenteEstudante extends Conta {
 
 	public ContaCorrenteEstudante(int agencia, int conta, String titular, double saldo) {
@@ -12,9 +14,12 @@ public final class ContaCorrenteEstudante extends Conta {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public void sacar(double montante) {
+	public void sacar(double montante) throws SaldoInsuficienteException {
 		// TODO Auto-generated method stub
+		if (getSaldo() < montante) {
+			throw new SaldoInsuficienteException();
+		}
+		montante -= getSaldo();
 
 	}
 

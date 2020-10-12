@@ -1,5 +1,7 @@
 package david.augusto.luan.entidades;
 
+import david.augusto.luan.exceptions.SaldoInsuficienteException;
+
 public abstract class Conta implements Tributavel {
 	private int agencia;
 	private int conta;
@@ -22,7 +24,7 @@ public abstract class Conta implements Tributavel {
 	}
 
 	// metodos abstratos nao tem corpo
-	public abstract void sacar(double montante);
+	public abstract void sacar(double montante) throws SaldoInsuficienteException;
 
 	// para ninguem sobrescrever o metodo depositar
 	public final void depositar(double montante) {
